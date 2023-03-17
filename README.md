@@ -1,0 +1,1 @@
+# react-laravel-mysql-product-manager-template
