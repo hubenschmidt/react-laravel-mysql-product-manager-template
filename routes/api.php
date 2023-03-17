@@ -15,14 +15,9 @@ use App\Http\Controllers\ProductsController;
 |
 */
 
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('products', function() {
-//     return response(['Product 1', 'product 2'], 200);
-// });
-
-// Route::get('products', 'ProductsController@index');
-Route::get('products', [ProductsController::class, 'index']);
+// Route::get('products', 'ProductsController@index'); // for legacy Laravel
+Route::get('products', [ProductsController::class, 'index']); // this is the newish syntax
